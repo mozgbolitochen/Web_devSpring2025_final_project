@@ -1,58 +1,8 @@
 
-<!-- app.component.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>3S Consulting</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-header></app-header>
+<app-header></app-header>
 
-  <div class="main-content">
-    <router-outlet></router-outlet> <!-- This is where the routed components will be displayed -->
-  </div>
-
-  <app-footer></app-footer>
-
-  <!-- Add scripts at the end of the body for optimal performance -->
-  <!-- Angular scripts -->
-  <script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="styles.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script>
-</body>
-</html>
-
-
-
-<!-- <div class="landing-container">
-  <h1>Welcome to 3S Consulting</h1>aasd
-  <p>We provide top-notch solutions for your business needs.</p>
-  <div class="features">
-    <div class="feature">
-      <h2>Web Development</h2>
-      <p>Crafting beautiful and functional websites.</p>
-    </div>
-    <div class="feature">
-      <h2>Deep Learning Consultations</h2>
-      <p>Leveraging AI for business advantages.</p>
-    </div>
-    <div class="feature">
-      <h2>Business Management</h2>
-      <p>Strategic advice for business growth.</p>
-    </div>
-  </div>
-  <button routerLink="/login" class="cta-button">Get Started</button>
+<div class="main-content">
+  <router-outlet></router-outlet>
 </div>
 
- -->
-<!-- <nav>
-  <ul>
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
-    <li><a routerLink="/login">Login</a></li>
-  </ul>
-</nav>
-<router-outlet></router-outlet> -->
+<app-footer></app-footer>

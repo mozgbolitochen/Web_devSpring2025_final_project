@@ -1,1 +1,25 @@
-<p>header works!</p>
+<header class="header">
+	<div class="logo">
+		<span >3s consulting</span>
+	</div>
+
+	<nav class="nav">
+		<a routerLink="/about" routerLinkActive="active" >{{ 'header.about' | translate }}</a>
+		<a routerLink="/home" routerLinkActive="active" >{{ 'header.pricing' | translate }}</a>
+		<a routerLink="/home" routerLinkActive="active" >{{ 'header.reviews' | translate }}</a>
+		<a routerLink="/about" routerLinkActive="active" >{{ 'header.company' | translate }}</a>
+		<a routerLink="/contact" routerLinkActive="active" >{{ 'header.contacts' | translate }}</a>
+	</nav>
+
+	<div class="buttons">
+		<button class="try-btn" routerLink="/home" >{{ 'header.try' | translate }}</button>
+		<button class="login-btn" routerLink="/login" >{{ 'header.login' | translate }}</button>
+	</div>
+ 	
+ 	<div class="language-switcher">
+		<button (click)="changeLanguage('ru')">🇷🇺 RU</button>
+		<button (click)="changeLanguage('en')">🇺🇸 EN</button>
+		<button (click)="changeLanguage('kz')">🇰🇿 KZ</button>
+	</div>
+
+</header>

@@ -6,8 +6,9 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
