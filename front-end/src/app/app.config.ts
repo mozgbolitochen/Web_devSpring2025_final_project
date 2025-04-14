@@ -11,19 +11,15 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component'
 import { FooterComponent } from './footer/footer.component'
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes), 
-    provideClientHydration(withEventReplay()),
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    LoginComponent,
-    HeaderComponent,
-    FooterComponent
+    provideClientHydration(withEventReplay())
   ],
+
+  
     
 
 };
