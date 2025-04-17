@@ -15,8 +15,8 @@ import { TranslateService, TranslateModule} from '@ngx-translate/core';
 export class AppComponent {
   title = 'front-end';
   constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('ru');
-    this.translate.use('ru');
+    this.translate.setDefaultLang('kz');
+    this.translate.use('kz');
   }
 
 }

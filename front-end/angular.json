@@ -37,11 +37,11 @@
               "src/styles.sass"
             ],
             "scripts": [],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            // "server": "src/main.server.ts",
+            // "outputMode": "server",
+            // "ssr": {
+            //   "entry": "src/server.ts"
+            // }
           },
           "configurations": {
             "production": {
