@@ -7,5 +7,38 @@
     "contacts": "Contacts",
     "try": "Try",
     "login": "Log in"
+  },
+  "hero": {
+    "title": "Online Platform for Pawnshops",
+    "subtitle": "Manage your business from any device",
+    "cta": "Get Started"
+  },
+  "features": {
+    "automation": "Full process automation",
+    "analytics": "Convenient analytics and reports",
+    "security": "Security and reliability",
+    "support": "24/7 support"
+  },
+  "about": {
+    "title": "About our platform",
+    "text": "Our mission is to simplify pawnshop management. We offer a cloud-based system that integrates everything in one place."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "send": "Send message"
+  },
+  "footer": {
+    
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "form": {
+    "name": "Name",
+    "message": "Message",
+    "submit": "Submit"
   }
 }

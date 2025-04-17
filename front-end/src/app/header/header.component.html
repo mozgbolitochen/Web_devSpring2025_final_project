@@ -1,15 +1,24 @@
 <header class="header">
 	<div class="logo">
-		<span >3s consulting</span>
+		<span routerLink ="/home"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">3s consulting</span>
 	</div>
-
-	<nav class="nav">
-		<a routerLink="/about" routerLinkActive="active" >{{ 'header.about' | translate }}</a>
-		<a routerLink="/home" routerLinkActive="active" >{{ 'header.pricing' | translate }}</a>
-		<a routerLink="/home" routerLinkActive="active" >{{ 'header.reviews' | translate }}</a>
-		<a routerLink="/about" routerLinkActive="active" >{{ 'header.company' | translate }}</a>
-		<a routerLink="/contact" routerLinkActive="active" >{{ 'header.contacts' | translate }}</a>
-	</nav>
+<nav class="nav">
+    <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      {{ 'header.about' | translate }}
+    </a>
+    <!-- <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      {{ 'header.pricing' | translate }}
+    </a>
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      {{ 'header.reviews' | translate }}
+    </a> -->
+    <!-- <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      {{ 'header.company' | translate }}
+    </a> -->
+    <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      {{ 'header.contacts' | translate }}
+    </a>
+  </nav>
 
 	<div class="buttons">
 		<button class="try-btn" routerLink="/home" >{{ 'header.try' | translate }}</button>

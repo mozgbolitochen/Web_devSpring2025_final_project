@@ -1,1 +1,25 @@
-<p>contact works!</p>
+<div class="contact-container">
+  <h2>{{ 'contact.title' | translate }}</h2>
+
+  <div class="contact-details">
+    <div class="detail">
+      <strong>{{ 'contact.phone' | translate }}:</strong>
+      <span>+7 (777) 123 45 67</span>
+    </div>
+    <div class="detail">
+      <strong>{{ 'contact.email' | translate }}:</strong>
+      <span>info&#64;3sconsulting.kz</span>
+    </div>
+    <div class="detail">
+      <strong>{{ 'contact.address' | translate }}:</strong>
+      <span>г. Алматы, ул. Примерная 123</span>
+    </div>
+  </div>
+
+  <form class="contact-form">
+    <input type="text" placeholder="Имя / Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea rows="4" placeholder="Сообщение / Message" required></textarea>
+    <button type="submit">{{ 'contact.send' | translate }}</button>
+  </form>
+</div>

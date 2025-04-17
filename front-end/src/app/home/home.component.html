@@ -1,20 +1,27 @@
 <!-- home.component.html -->
 <div class="landing-container">
-  <h1>Welcome to 3S Consulting</h1>
-  <p>We provide top-notch solutions for your business needs.</p>
-  <div class="features">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>{{ 'hero.title' | translate }}</h1>
+    <p>{{ 'hero.subtitle' | translate }}</p>
+    <a routerLink="/login" class="cta-button">
+      {{ 'hero.cta' | translate }}
+    </a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
     <div class="feature">
-      <h2>Web Development</h2>
-      <p>Crafting beautiful and functional websites.</p>
+      <h2>{{ 'features.automation' | translate }}</h2>
     </div>
     <div class="feature">
-      <h2>Deep Learning Consultations</h2>
-      <p>Leveraging AI for business advantages.</p>
+      <h2>{{ 'features.analytics' | translate }}</h2>
     </div>
     <div class="feature">
-      <h2>Business Management</h2>
-      <p>Strategic advice for business growth.</p>
+      <h2>{{ 'features.security' | translate }}</h2>
     </div>
-  </div>
-  <a href="/login" class="cta-button">Get Started</a>
+    <div class="feature">
+      <h2>{{ 'features.support' | translate }}</h2>
+    </div>
+  </section>
 </div>

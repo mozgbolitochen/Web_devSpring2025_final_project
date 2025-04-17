@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.sass'
 })
