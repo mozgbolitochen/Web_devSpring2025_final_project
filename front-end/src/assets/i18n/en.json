@@ -5,8 +5,10 @@
     "reviews": "Reviews",
     "company": "About company",
     "contacts": "Contacts",
+    "profile": "My Profile",
     "try": "Try",
-    "login": "Log in"
+    "login": "Log in",
+    "logout":"Log out"
   },
   "hero": {
     "title": "Online Platform for Pawnshops",
@@ -28,8 +30,18 @@
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
-    "send": "Send message"
-  },
+    "form": {
+      "name": "Your Name",
+      "name_placeholder": "Enter your name",
+      "email": "Email",
+      "email_placeholder": "Enter your email",
+      "phone": "Phone",
+      "phone_placeholder": "Enter your phone number",
+      "message": "Message",
+      "message_placeholder": "Enter your message",
+      "send": "Send Message"
+      }
+    },
   "footer": {
     
     "rights": "All rights reserved",
@@ -40,5 +52,30 @@
     "name": "Name",
     "message": "Message",
     "submit": "Submit"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "placeholders": {
+      "username": "Enter your username",
+      "password": "Enter your password"
+    },
+    "submit": "Log In",
+    "errors": {
+      "required": "This field is required"
+    }
+  },
+
+  "profile": {
+    "title": "My Profile",
+    "username": "Username",
+    "email": "Email",
+    "edit": "Edit Profile",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "logout": "Log Out"
   }
 }
+
+

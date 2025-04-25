@@ -6,7 +6,7 @@
     <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       {{ 'header.about' | translate }}
     </a>
-    <!-- <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <!--<a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       {{ 'header.pricing' | translate }}
     </a>
     <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
@@ -18,14 +18,25 @@
     <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       {{ 'header.contacts' | translate }}
     </a>
+    <a *ngIf="isLoggedIn()" routerLink="/profile" routerLinkActive="active">
+      {{ 'header.profile' | translate }}
+    </a>
   </nav>
 
 	<div class="buttons">
-		<button class="try-btn" routerLink="/home" >{{ 'header.try' | translate }}</button>
-		<button class="login-btn" routerLink="/login" >{{ 'header.login' | translate }}</button>
+		<button class="try-btn" routerLink="/home" >
+      {{ 'header.try' | translate }}
+    </button>
+		<button *ngIf="!isLoggedIn()" class="login-btn" routerLink="/login">
+     {{ 'header.login' | translate }}
+    </button>
+    <button *ngIf="isLoggedIn()" class="logout-btn" (click)="handleLogout()">
+    <span>{{ username }}</span>
+     {{ 'header.logout' | translate }}
+    </button>
 	</div>
  	
- 	<div class="language-switcher">
+  <div class="language-switcher">
 		<button (click)="changeLanguage('ru')">🇷🇺 RU</button>
 		<button (click)="changeLanguage('en')">🇺🇸 EN</button>
 		<button (click)="changeLanguage('kz')">🇰🇿 KZ</button>

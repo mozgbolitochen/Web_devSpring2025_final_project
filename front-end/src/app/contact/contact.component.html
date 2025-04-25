@@ -2,32 +2,69 @@
   <h2>{{ 'contact.title' | translate }}</h2>
 
   <div class="contact-details">
-    <div class="detail">
-      <strong>{{ 'contact.phone' | translate }}:</strong>
-      <span>+7 (777) 123 45 67</span>
-    <div class="detail">
-    </div>
-      <strong>{{ 'contact.phone' | translate }}:</strong>
-      <span>+7 (777) 123 45 67</span>
-    <div class="detail">
-    </div>
-       <strong>{{ 'contact.phone' | translate }}:</strong>
-      <span>+7 (777) 123 45 67</span>
-    </div>
-    <div class="detail">
-      <strong>{{ 'contact.email' | translate }}:</strong>
-      <span>lonbard&#64;3sc.kz</span>
-    </div>
-    <div class="detail">
-      <strong>{{ 'contact.address' | translate }}:</strong>
-      <span>г. Алматы, ул. Толе би 23А, 2 этаж, 211 кабинет</span>
+    <div class="detail" *ngFor="let detail of contactDetails">
+      <strong>{{ detail.label | translate }}:</strong>
+      <span>{{ detail.value }}</span>
     </div>
   </div>
+  
 
-  <form class="contact-form">
-    <input type="text" placeholder="Имя / Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea rows="4" placeholder="Сообщение / Message" required></textarea>
-    <button type="submit">{{ 'contact.send' | translate }}</button>
+  
+
+ <form class="contact-form" (ngSubmit)="submitForm()" #contactForm="ngForm">
+    <div class="form-group">
+      <label for="name">{{ 'contact.form.name' | translate }}</label>
+      <input 
+        id="name"
+        type="text" 
+        [(ngModel)]="formData.name" 
+        name="name" 
+        [placeholder]="'contact.form.name_placeholder' | translate"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="email">{{ 'contact.form.email' | translate }}</label>
+      <input 
+        id="email"
+        type="email" 
+        [(ngModel)]="formData.email" 
+        name="email" 
+        [placeholder]="'contact.form.email_placeholder' | translate"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="phone">{{ 'contact.form.phone' | translate }}</label>
+      <input 
+        id="phone"
+        type="tel" 
+        [(ngModel)]="formData.phone" 
+        name="phone" 
+        [placeholder]="'contact.form.phone_placeholder' | translate"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="message">{{ 'contact.form.message' | translate }}</label>
+      <textarea 
+        id="message"
+        rows="4" 
+        [(ngModel)]="formData.message" 
+        name="message" 
+        [placeholder]="'contact.form.message_placeholder' | translate"
+        required
+      ></textarea>
+    </div>
+
+    <button 
+      type="submit" 
+      class="submit-btn"
+      [disabled]="contactForm.invalid"
+    >
+      {{ 'contact.form.send' | translate }}
+    </button>
   </form>
 </div>
